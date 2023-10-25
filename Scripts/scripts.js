@@ -1,1 +1,3 @@
-alert("Under Construction :)")
+function ConstructionMsg(){
+  alert("Under Construction :)")
+}
