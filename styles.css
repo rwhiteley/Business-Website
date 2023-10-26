@@ -10,22 +10,35 @@ body {
     margin-right: auto;
     margin-top: 2%;
     margin-bottom: 1%;
+    border-radius: 50%;
 }
   
 
 h1{
     text-align: center;
-    font-family:'Space Mono';
+    font-family:'poppins';
     color: rgb(93, 158, 141);
     margin-top: 0px;
 }
 
-p{
+h2{  
     text-align: center;
-    font-family:'Space Mono';
+    font-family:'poppins';
+    font-weight: normal;
+    color: rgb(94, 94, 94);;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 
+p{
+    text-align: center;
+    margin: 0 auto;
+    font-family:'Space Mono';
+    color: rgb(94, 94, 94);
+    font-size: 13px;
+    
+}
 
 /* ABOUT */
 .imgteam {
@@ -34,7 +47,7 @@ p{
     height: auto; /* Automatically scales the height to maintain aspect ratio */
 }
 
-.teamAbout{
+.teamabout{
     font-family:'Space Mono';
     text-align: left;
     padding-left: 20px;
@@ -42,32 +55,57 @@ p{
 }
 
 /* MENU */
-.menu{
+.navbar{
     text-align: center;
     font-family:'Space Mono';
+    font-size: 16px;
     color: rgb(93, 158, 141);
     text-decoration: none;
 }
 
-.menu a:link
+.navbar a:link
 {
     text-decoration: none; 
     color: rgb(93, 158, 141); 
 }
 
-.menu a:visited
+.navbar a:visited
 {
     text-decoration: none;  
     color: rgb(93, 158, 141);
 }
 
-.menu a:hover{
+.navbar a:hover{
     text-decoration: underline;
 }
 
-.menu a:active{
+.navbar a:active{
     text-decoration: none;
     color:rgb(93, 158, 141);
 }
 
 
+/* gradient generator */
+#gradient-box{
+    width:500px;
+    height:300px;
+    max-width:100%;
+    margin: auto;
+    background-image: linear-gradient(rgb(185, 192, 236), rgb(180, 222, 236), rgb(231, 165, 203));
+}
+
+.button{
+    font-family:'Space Mono';
+    margin-top: 15px;
+    
+}
+
+.centered-container
+{
+    text-align: center; /* Center horizontally */
+}
+
+.text{
+    margin-top: 5px;
+    font-size: 13px;
+}
