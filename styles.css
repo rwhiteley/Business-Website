@@ -202,4 +202,39 @@ ul li a:hover {
     }
 }
 
+/* Item Adder input*/
 
+.item-adder-container{
+    display: flex;
+    flex-direction: row;
+    max-width: 320px; /*apparently a good size for all mobiles and desktops? */
+    margin:30px auto;
+}
+
+.item-adder-container input{
+    color: blue;
+    background-color: rgb(158, 253, 222);
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin: 3px;
+}
+
+.item-adder-container button{
+    color: blue;
+    background-color: aquamarine;
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    margin: 3px;
+}
+.item-adder-container button:active{
+    filter: brightness(85%);
+}
+.item-adder-container input::placeholder{
+    color:rgb(0, 132, 255);
+}
