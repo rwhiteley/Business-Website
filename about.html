@@ -10,40 +10,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="icon" type="image/x-icon" href="Images/Gradient.jpg">
-    <link rel="icon" type="image/x-icon" href="Images/Gradient.jpg">
-    <link rel="stylesheet" href="styles.css">
-    
+    <script src="Scripts/scripts.js"></script>
+    <!-- Include the html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <section>
-        <img src="Images/Gradient.jpg" alt="image of gradient logo" class="imglogo" >
-        <h1>ABOUT</h1>
-        <div class="navbar">
-            <a class="active" href="index.html">Home</a>
-            <a href="examples.html">Examples</a>
-            <a href="about.html">About</a>
-            <a href="basket.html">Basket</a>
+    <header>
+        <div id="brand"><a href="index.html">GRADIENT MAKER</a></div>
+       <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="basket.html">Basket</a></li>
+        </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)"> 
+            <div class="bar1">Menu</div>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="basket.html">Basket</a></li>
+            </ul>   
         </div>
-    </section>
+        <audio id="myAudio" controls>
+            <source src="Audio/audio1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+            <div id="playerControls">
+                <button class="btn" id="previousButton"><i class="fa fa-step-backward" style="font-size:14px"></i></button>
+                <button class="btn" id="playButton"><i class='fa fa-play' style='font-size:14px'></i></button>
+                <button class="btn" id="nextButton"><i class="fa fa-step-forward" style="font-size:14px"></i></button>
+            </div>
+    </header>
+        
+   
+   
+    <div class="teamabout">
+        <h2>Meet the team</h2>
+
+        <p class="teamabout">We are proud to introduce our exceptional team, a group of dedicated 
+            individuals who share a common passion for art and design. With a diverse 
+            blend of talents, backgrounds, and perspectives, our team consists of four 
+            remarkable women and two outstanding men who have come together to bring you 
+            the world of gradient wallpapers.<br>
+            In the vast landscape of digital creativity, our team stands out with a singular 
+            focus – crafting captivating gradient wallpapers that infuse life into your screens. 
+            We firmly believe that a  designed backdrop can not only enhance your visual 
+            experience but also inspire your daily pursuits.</p>
     
-
-        <section class="teamabout">
-            <h3>Meet the team</h3>
-
-            <p>We are proud to introduce our exceptional team, a group of dedicated 
-                individuals who share a common passion for art and design. With a diverse 
-                blend of talents, backgrounds, and perspectives, our team consists of four 
-                remarkable women and two outstanding men who have come together to bring you 
-                the world of gradient wallpapers.</p>
-            <p>
-                In the vast landscape of digital creativity, our team stands out with a singular 
-                focus – crafting captivating gradient wallpapers that infuse life into your screens. 
-                We firmly believe that a beautifully designed backdrop can not only enhance your visual 
-                experience but also inspire your daily pursuits.</p>
-
-            <img src="Images/businesspeople.jpeg"alt="image of the team" class="imgteam">
-    </section>
-
+        <img src="Images/businesspeople.jpeg"alt="image of the team" class="imgteam">
+        </div>
+   
 </body>
 </html>
+
