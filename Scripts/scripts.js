@@ -35,3 +35,54 @@ function getRandomColor() {
         link.click();
     });
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cells = document.querySelectorAll('[data-cell]');
+    const resetButton = document.getElementById('reset-button');
+    let currentPlayer = 'X';
+    let gameOver = false;
+
+    function checkWinner() {
+        const winningCombos = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        for (const combo of winningCombos) {
+            const [a, b, c] = combo;
+            if (cells[a].getAttribute('data-cell') && cells[a].getAttribute('data-cell') === cells[b].getAttribute('data-cell') && cells[a].getAttribute('data-cell') === cells[c].getAttribute('data-cell')) {
+                cells[a].style.backgroundColor = 'lightgreen';
+                cells[b].style.backgroundColor = 'lightgreen';
+                cells[c].style.backgroundColor = 'lightgreen';
+                gameOver = true;
+            }
+        }
+    }
+
+    cells.forEach(cell => {
+        cell.addEventListener('click', () => {
+            if (gameOver || cell.getAttribute('data-cell') !== '') return;
+            cell.setAttribute('data-cell', currentPlayer);
+            checkWinner();
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        });
+    });
+
+    resetButton.addEventListener('click', () => {
+        cells.forEach(cell => {
+            cell.setAttribute('data-cell', '');
+            cell.style.backgroundColor = '#eee';
+        });
+        currentPlayer = 'X';
+        gameOver = false;
+    });
+});
