@@ -1,100 +1,30 @@
-body {
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
     background-color: rgb(239, 234, 231);
 }
 
-.imglogo{
-    width: 100px;
-    height: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 1%;
-    border-radius: 50%;
-}
-  
-
-h1{
-    text-align: center;
-    font-family:'poppins';
-    color: rgb(93, 158, 141);
-    margin-top: 0px;
-}
-
+/* Define basic styles for the menu bar */
 h2{  
     text-align: center;
     font-family:'poppins';
     font-weight: normal;
     color: rgb(94, 94, 94);;
-<<<<<<< Updated upstream
-    margin-top: 30px;
-    margin-bottom: 5px;
-=======
     margin-top: 50px;
     margin-bottom: 3px;
->>>>>>> Stashed changes
 }
-
-
 p{
     text-align: center;
     margin: 0 auto;
     font-family:'Space Mono';
     color: rgb(94, 94, 94);
     font-size: 13px;
-    
 }
-
-/* ABOUT */
-.imgteam {
-    width: 100%; /* Adjust the percentage as needed */
-    max-width: 100%; /* Ensures the image won't exceed its natural width */
-    height: auto; /* Automatically scales the height to maintain aspect ratio */
-}
-
-.teamabout{
-    font-family:'Space Mono';
-    text-align: left;
-    padding-left: 20px;
-    padding-right: 30px;
-}
-
-/* MENU */
-.navbar{
-    text-align: center;
-    font-family:'Space Mono';
-    font-size: 16px;
-    color: rgb(93, 158, 141);
-    text-decoration: none;
-}
-
-.navbar a:link
-{
-    text-decoration: none; 
-    color: rgb(93, 158, 141); 
-}
-
-.navbar a:visited
-{
-    text-decoration: none;  
-    color: rgb(93, 158, 141);
-}
-
-.navbar a:hover{
-    text-decoration: underline;
-}
-
-.navbar a:active{
-    text-decoration: none;
-    color:rgb(93, 158, 141);
-}
-
 
 /* gradient generator */
-<<<<<<< Updated upstream
-#gradient-box{
-    width:500px;
-=======
 .generatorbox{
     width: 600px;
     height: 400px;
@@ -110,7 +40,6 @@ p{
    
 #gradient-box{
     width:600px;
->>>>>>> Stashed changes
     height:300px;
     max-width:100%;
     margin: auto;
@@ -119,21 +48,23 @@ p{
 
 .button{
     font-family:'Space Mono';
-    margin-top: 15px;
-    
+    margin-top: 15px;   
 }
 
 .centered-container
 {
-    text-align: center; /* Center horizontally */
+    text-align: center; /* Center horizontally */   
 }
 
-.text{
-    margin-top: 5px;
-    font-size: 13px;
+/* music player */
+
+
+.btn {
+    background-color: transparent;
+    color: rgb(94, 94, 94);
+    border:none;
+    cursor: pointer;
 }
-<<<<<<< Updated upstream
-=======
 
 .btn:hover {
     background: linear-gradient(80deg,rgb(180, 222, 236), #ffcc00,rgb(231, 165, 203)); /* Change the gradient colors as desired */
@@ -324,4 +255,3 @@ height: 30px;
 cursor: pointer;
 
 }
->>>>>>> Stashed changes
