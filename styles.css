@@ -14,7 +14,7 @@ h2{
     font-weight: normal;
     color: rgb(94, 94, 94);;
     margin-top: 50px;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 p{
     text-align: center;
@@ -26,17 +26,20 @@ p{
 
 /* gradient generator */
 .generatorbox{
-background-color: white;
-width: 535px;
-height: 435px;
-max-width:100%;
-margin: auto;
-
-
+    width: 600px;
+    height: 400px;
+    max-width: calc(95% - 20px); /* 20px margin on both right and left sides */
+    max-height: 400px; /* Limit the maximum height to 400px */
+    margin: 0 auto; /* Center the box horizontally */
+    background-color: white;
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
 }
-
-#gradient-box{   
-    width:500px;
+   
+#gradient-box{
+    width:600px;
     height:300px;
     max-width:100%;
     margin: auto;
@@ -73,9 +76,8 @@ margin: auto;
     color: rgb(94, 94, 94);
     font-size: 18px;
     align-items: center;
-    margin-top: 5px; 
+    margin-top: 4px; 
     margin-left: 10px;
-    
 }
 
 #myAudio{
@@ -155,7 +157,7 @@ ul li a:hover {
 }
 
 #hamburger-icon{
-    margin: auto 0;
+    margin: auto 0;   
     display: none;
     cursor: pointer;
 }
@@ -193,6 +195,7 @@ ul li a:hover {
 
 }
 
+
 @media only screen and (max-width: 600px){
     header nav{
         display: none;
@@ -202,39 +205,53 @@ ul li a:hover {
     }
 }
 
-/* Item Adder input*/
 
-.item-adder-container{
+
+.game-container {
     display: flex;
-    flex-direction: row;
-    max-width: 320px; /*apparently a good size for all mobiles and desktops? */
-    margin:30px auto;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.item-adder-container input{
-    color: blue;
-    background-color: rgb(158, 253, 222);
-    border: 0;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    text-align: center;
-    margin: 3px;
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    width: 310px;
 }
 
-.item-adder-container button{
-    color: blue;
-    background-color: aquamarine;
-    border: 0;
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 20px;
-    text-align: center;
-    margin: 3px;
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #eee;
+    color: #333;
 }
-.item-adder-container button:active{
-    filter: brightness(85%);
+
+.cell[data-cell="X"]::before {
+    content: "❌";
+    color: #FF5733;
 }
-.item-adder-container input::placeholder{
-    color:rgb(0, 132, 255);
+
+.cell[data-cell="O"]::before {
+    content: "⭕";
+    color: #3383FF;
+}
+
+
+
+
+#reset-button{
+font-family:'Space Mono';
+margin-top: 15px;
+width: 50px;
+height: 30px;
+cursor: pointer;
+
 }
